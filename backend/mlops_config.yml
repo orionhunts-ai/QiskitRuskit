@@ -1,0 +1,19 @@
+mlops_tools:
+  - name: mlflow
+    enabled: true
+    config:
+      tracking_uri: "http://localhost:5000"
+      experiment_name: "v0.0.1"
+      artifact_location: "/path/to/artifacts"
+
+  - name: dvc
+    enabled: true
+    config:
+      remote_storage: "s3://mydvcstore"
+      version: "2.0"
+
+  - name: wandb
+    enabled: false
+    config:
+      project: "Orion Hunts"
+      entity: "Synavate"

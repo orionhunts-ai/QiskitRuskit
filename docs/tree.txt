@@ -1,0 +1,13 @@
+src/
+ ├── config/
+ │    └── mod.rs       # Configuration related functions
+ ├── db/
+ │    └── mod.rs       # Database interactions, including MongoDB setup
+ ├── models/
+ │    └── mod.rs       # Domain models and structs
+ ├── services/
+ │    └── mod.rs       # Business logic layer
+ ├── handlers/
+ │    └── mod.rs       # API route handlers
+ └── main.rs           # Entry point of the application
+                                            
