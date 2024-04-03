@@ -6,6 +6,7 @@
 _private
 _private/*
 _private/research
+.DS_Store
 
 #Useful tools
 backend/
