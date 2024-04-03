@@ -1,0 +1,26 @@
+from python import Python as impy
+let np = impy.import_module("numpy")
+
+
+fn binary_classification(num_inputs=2, num_samples=20)
+    let num_inputs = 2
+    let num_samples = 20
+    
+    #Random Data Generation
+    var X = 2 * algorithm_globals.random.random([num_samples, num_inputs])
+    var y01 = 1 * np.sum(X, axis=1) >= 0
+
+    # Convert to torch Tensors
+    var X_ = Tensor(X)
+    var y01_ = Tensor(y01).reshape(len(y)).long()
+    let y_ = Tensor(y).reshape(len(y), 1)
+
+
+    # Plot dataset
+    for x, y_target in zip(X, y):
+        if y_target == 1:
+            plt.plot(x[0], x[1], "bo")
+        else:
+            plt.plot(x[0], x[1], "go")
+    plt.plot([-1, 1], [1, -1], "--", color="black")
+    plt.show()

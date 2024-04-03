@@ -1,0 +1,20 @@
+# Mojo Implementation of a Quantum Circuit
+from python import Python as impy
+
+def import_modules():
+    try:
+        let qiskit = impy.import_module("qiskit")
+        let np = impy.import_module("numpy")
+        let qc_library = qiskit.QuantumCircuit(3) #impy.import_module(qiskit.QuantumCircuit)
+        let qc = qc_library 
+        return Struct(qc)
+        
+    except Exception:
+        print("Error is: %s ", Exception)
+
+# 1. A quantum circuit for preparing the quantum state > generate superposition > Add Quantum phase > 2 qubits
+let qc_example = qc_library(3)
+qc_example.h(0)          # generate superpostion
+qc_example.p(np.pi/2,0)  # add quantum phase
+qc_example.cx(0,1)       # 0th-qubit-Controlled-NOT gate on 1st qubit
+qc_example.cx(0,2)       # 0th-qubit-Controlled-NOT gate on 2nd qubit

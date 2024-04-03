@@ -1,0 +1,38 @@
+ml_lib_backend/
+├── Cargo.toml            # Rust project manifest file
+├── src/                  # Source files
+│   ├── lib.rs            # Library root, exposes the public API
+│   ├── algorithm/        # Machine learning algorithms
+│   │   ├── mod.rs        # Declares submodules for different algorithms
+│   │   ├── linear.rs     # Linear models, e.g., linear regression
+│   │   └── tree/         # Decision tree models
+│   │       ├── mod.rs    # Tree-specific models, e.g., decision tree, random forest
+│   │       ├── node.rs   # Tree node implementation
+│   │       └── utils.rs  # Tree-specific utilities
+│   │
+│   ├── data/             # Data processing and manipulation
+│   │   ├── mod.rs        # Data module entry point
+│   │   ├── frame.rs      # Dataframe implementation for handling datasets
+│   │   └── series.rs     # Series implementation, a single column of a DataFrame
+│   │
+│   ├── metric/           # Evaluation metrics
+│   │   ├── mod.rs        # Metrics module entry point
+│   │   ├── accuracy.rs   # Accuracy calculation
+│   │   └── loss.rs       # Loss functions, e.g., mean squared error
+│   │
+│   ├── optimization/     # Optimization algorithms
+│   │   ├── mod.rs        # Optimization algorithms module entry
+│   │   └── gradient.rs   # Gradient descent implementation
+│   │
+│   ├── utils/            # Utility functions and traits
+│   │   ├── mod.rs        # Utilities module entry point
+│   │   └── math.rs       # Mathematical utilities, e.g., matrix operations
+│   │
+│   └── parallel/         # Parallel and concurrent computing utilities
+│       ├── mod.rs        # Parallel computing module entry point
+│       └── threadpool.rs # Thread pool implementation for parallel tasks
+│
+└── tests/                # Automated tests
+    ├── algorithm_tests.rs
+    ├── data_tests.rs
+    └── metric_tests.rs

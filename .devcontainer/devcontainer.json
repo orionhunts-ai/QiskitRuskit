@@ -1,0 +1,14 @@
+{
+    "name": "QiskitRustkit_Library",
+    "image": "rust:1.62",
+    "settings": { 
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        "rust-lang.rust",
+        "mutantdino.resourcemonitor"
+    ],
+    "forwardPorts": [8000],
+    "postCreateCommand": "cargo build",
+    "remoteUser": "root"
+}

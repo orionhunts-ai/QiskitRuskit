@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "melopsai-qiskit"
+version = "0.1.0"
+description = "Back end for the melopsai package in Python3"
+authors = ["snyata <core@synavate.tech>"]
+license = "Apache-2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+qiskit = "^1.0.2"
+openai = "^1.16.0"
+portkey-ai = "^1.2.2"
+rustworkx = "^0.14.2"
+wandb = "^0.16.5"
+python-dotenv = "^1.0.1"
+qiskit-machine-learning = "^0.7.2"
+qiskit-ibm-runtime = "^0.22.0"
+ipykernel = "^6.29.4"
+llama-index = "^0.10.26"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

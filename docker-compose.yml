@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  rust-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: rust-builder
+    volumes:
+      - ./src:/usr/src/myapp/src
+      - ./Cargo.toml:/usr/src/myapp/Cargo.toml
+      - ./Cargo.lock:/usr/src/myapp/Cargo.lock
+    command: cargo watch -x run
+
+  python-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: python-runtime
+    volumes:
+      - ./:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - rust-service
+    # Replace below with your actual start command
+    command: python your-app.py
+
+  # Placeholder for Mojo service, adjust as necessary
+  mojo-service:
+    image: your-mojo-language-base-image
+    volumes:
+      - ./mojo-src:/mojo/src
+    command: <your-mojo-service-start-command>
