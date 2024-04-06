@@ -1,0 +1,25 @@
+{
+  "strategy": {
+      "mode": "loadbalance"
+    },
+  "targets": [
+    {
+      "provider": "openai",
+      "api_key": "sk-***"
+    },
+    {
+      "strategy": {
+          "mode": "fallback",
+          "on_status_codes": [429, 241]
+        },
+      "targets": [
+        {
+          "virtual_key": "***"
+        },
+        {
+          "virtual_key": "***"
+        }
+      ]
+    }
+  ]
+}

@@ -1,13 +1,11 @@
 #IRIS QML Example in Mojo
 from python import Python as pymo
 
-let tools = ["wandb"]
 
-fn init_mlops(tools):
-    let wandb = pymo.import_module(tools[0])
 
-fn df_data(data):
-    let df = pd.open_csv(data)
+
+
+
 
 
 

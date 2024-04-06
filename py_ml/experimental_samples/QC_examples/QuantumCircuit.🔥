@@ -6,8 +6,8 @@ def import_modules():
         let qiskit = impy.import_module("qiskit")
         let np = impy.import_module("numpy")
         let qc_library = qiskit.QuantumCircuit(3) #impy.import_module(qiskit.QuantumCircuit)
-        let qc = qc_library 
-        return Struct(qc)
+        var qc = object(qc_library)
+        return 
         
     except Exception:
         print("Error is: %s ", Exception)

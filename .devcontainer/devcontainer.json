@@ -1,14 +1,40 @@
 {
-    "name": "QiskitRustkit_Library",
-    "image": "rust:1.62",
-    "settings": { 
-        "terminal.integrated.shell.linux": "/bin/bash"
+    "name": "Qiskit_Rustkit",
+    "build": {
+      "dockerfile": "Dockerfile",
+      "context": ".",
+      "args": {
+        // Add build arguments if any
+      }
+    },
+    "runArgs": [
+      // Add runtime arguments if needed, such as "--network=host"
+    ],
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash",
+      "[rust]": {
+        "editor.formatOnSave": true,
+        "editor.codeLens": {
+          "references": true,
+          "referencesAllFunctions": true
+        }
+      },
+      "files.eol": "\n", // Ensure LF line endings
+      "rust-analyzer.checkOnSave.command": "clippy"
     },
     "extensions": [
-        "rust-lang.rust",
-        "mutantdino.resourcemonitor"
+      "rust-lang.rust", 
+      "matklad.rust-analyzer", 
+      "belfz.search-crates-io", 
+      "serayuzgur.crates",
+      "swellaby.vscode-rust-test-adapter",       "EditorConfig.EditorConfig",
+      "gitlens",
+      "eamodio.gitlens"
     ],
-    "forwardPorts": [8000],
-    "postCreateCommand": "cargo build",
-    "remoteUser": "root"
-}
+    "postCreateCommand": "cargo build", // Build the project after creating the container
+    "remoteUser": "vscode", // Specify if using a non-root user
+    "forwardPorts": [
+      // Specify ports that need to be forwarded, e.g., for web servers
+    ]
+  }
+  

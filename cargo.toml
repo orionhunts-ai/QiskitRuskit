@@ -15,7 +15,7 @@ categories = ["qiskit", "qml", "pytorch"]
 edition = "2018"
 
 [workspace]
-members = ["unit_tests", "qiskit_algo", "qml_rustkit", "qiskit_bridge", "duh_ta", "quantilay"]
+members = ["unit_tests", "qiskit_algo", "qml_rustkit", "qiskit_bridge", "duh_ta", "quantilay", "peftgraph-rs"]
 
 [dependencies]
 log = "0.4.21"

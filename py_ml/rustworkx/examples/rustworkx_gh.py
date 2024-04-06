@@ -1,4 +1,6 @@
+
 import rustworkx
+
 
 # Rustworkx's undirected graph type.
 graph = rustworkx.PyGraph()

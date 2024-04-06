@@ -1,5 +1,7 @@
 from python import Python as impy
 let np = impy.import_module("numpy")
+let torch = impy.import_module("torch")
+
 
 
 fn binary_classification(num_inputs=2, num_samples=20)
@@ -16,11 +18,11 @@ fn binary_classification(num_inputs=2, num_samples=20)
     let y_ = Tensor(y).reshape(len(y), 1)
 
 
-    # Plot dataset
+    '''Plot dataset
     for x, y_target in zip(X, y):
         if y_target == 1:
             plt.plot(x[0], x[1], "bo")
         else:
             plt.plot(x[0], x[1], "go")
     plt.plot([-1, 1], [1, -1], "--", color="black")
-    plt.show()
+    plt.show()'''

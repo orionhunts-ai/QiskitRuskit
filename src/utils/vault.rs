@@ -2,7 +2,7 @@
 use std::env;
 use std::error::Error;
 
-fn main() -> Result<(), Box<dyn Error>> {
+fn main() -> Result<(), Box<dyn std:error::Error>> {
     // Load environment variables from .env file.
     // Fails if .env file not found, not readable or invalid.
     dotenv.vault::dotenv()?;

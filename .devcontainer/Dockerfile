@@ -28,9 +28,8 @@ USER $USERNAME
 # Set the default working directory
 WORKDIR /workspace
 
-# [Optional] Install Rust nightly and additional components
-# RUN rustup install nightly && rustup default nightly
-# RUN rustup component add rustfmt clippy
+RUN rustup install nightly && rustup default nightly
+RUN rustup component add rustfmt clippy
 
 # Set the default command for the container
 CMD ["bash"]

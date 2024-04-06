@@ -1,0 +1,6 @@
+#IRIS QML Example in Mojo
+import os
+from python import Python as impy
+
+
+let wandb = impy.import_module("wandb")
